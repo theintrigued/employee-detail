@@ -17,7 +17,7 @@ This plugin gets user/employee data from the database. It is a WordPress Gutenbe
 
 ## Installation
 
-All you need to do to get the plugin working is exract the file in your plugins directory on the server and activate it from the plugins admin panel.
+All you need to do to get the plugin working is extract the file in your plugins directory on the server and activate it from the plugins admin panel.
 
 * Upload the plugin folder  to the `/wp-content/plugins` directory.
 
