@@ -5,14 +5,13 @@
 * Tested up to:      1.0
 * License:           Available for use to anyone allowed
 
-
 # A WordPress Block Pugin to get employee data from the database!
 
 ## Description
 
 This plugin gets user/employee data from the database. It is a WordPress Gutenberg Block for the most part which can be added to the post_content as a block. The view in the editor is the same as the user frontend. The user/employee can be selected from a dropdown list, after which the user's image, full name and position at the company can be seen at first. Upon clicking the element, a small overlay appears showing more details about the user/employee which include a short description and social links.
 
-<i>For testing purposes, 2 files are included for user registeration as more than usual data is needed to be saved at registration. </i>
+<i>For testing purposes, 3 files are included in the `misc` folder for user registeration as more than usual data is needed to be saved at registration. </i>
 
 
 
@@ -64,4 +63,21 @@ All you need to do to get the plugin working is exract the file in your plugins 
 2. `description` for the description
 
 The above identifiers are used to fetch required data from the database using the `get_user_meta` function.
+
+Here is an image of the same structure:
+
+<img src="./images/1.png" width="400px">
+
+# Further Relevant Images
+
+<img src="./images/2.png" width="200px">
+
+<img src="./images/3.png" width="200px">
+
+<img src="./images/4.png" width="200px">
+
+<img src="./images/5.png" width="200px">
+
+<img src="./images/6.png" width="200px">
+
 
