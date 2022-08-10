@@ -3,7 +3,7 @@
 * Developer:         Ali W.
 * Tags:              block
 * Tested up to:      1.0
-* License:           Available for use to anyone allowed
+* License:           Available to share and edit for any means needed by Inpsyde.
 
 # A WordPress Block Pugin to get employee data from the database!
 

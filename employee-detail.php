@@ -2,24 +2,14 @@
 
 /**
  * Plugin Name:       Employee Detail
- * Description:       Example static block scaffolded with Create Block tool.
+ * Description:       A WordPress Block Pugin to get employee data from the database!
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Version:           0.1.0
- * Author:            The WordPress Contributors
- * License:           GPL-2.0-or-later
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       employee-detail
+ * Author:            Ali W.
+ * License:           Available to share and edit for any means needed by Inpsyde.
  *
  * @package           create-block
- */
-
-/**
- * Registers the block using the metadata loaded from the `block.json` file.
- * Behind the scenes, it registers also all assets so they can be enqueued
- * through the block editor in the corresponding context.
- *
- * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 
 class EmployeeDetail
@@ -43,6 +33,15 @@ class EmployeeDetail
         ]);
     }
 
+
+/**
+ * Registers the block using the metadata loaded from the `block.json` file.
+ * Behind the scenes, it registers also all assets so they can be enqueued
+ * through the block editor in the corresponding context.
+ *
+ * The Call Back function renders the preview upon completion of the block registration.
+ */
+
     function create_block_employee_detail_block_init()
     {
 
@@ -56,7 +55,13 @@ class EmployeeDetail
     }
 
 
-//Get Names and Employee ID (DO NOT TOUCH!) XXXX
+/**
+ * Get all 'subscribers' (an assumption), from the database with their required data
+ * Uses get_user_meta() to retreieve data.
+ * 
+ * @return WP_REST_RESPONSE with all names and ids to the api request. 
+ */
+
     function getNamesAndIDs()
     {
 
@@ -87,6 +92,14 @@ class EmployeeDetail
 
         return $response;
     }
+
+
+/**
+ * Generate the editor screen preview.
+ * Takes all the employee data and makes up a HTML string to send as a response.
+ * 
+ * @return WP_REST_RESPONSE with the required ready HTML preview.
+ */
 
     function getPreview($request)
     {
@@ -137,7 +150,12 @@ class EmployeeDetail
         return $response;
     }
 
-//Generate HTML for Employee Preview with given data
+/**
+ * Generate HTML code for the preview function
+ * More like a 'helper' function to reduce the size of the preview function
+ * 
+ * @return string HTML.
+ */
     function generateHTML($linkHTML, $name, $position, $description,$avatarURL)
     {
 
@@ -165,7 +183,13 @@ class EmployeeDetail
 HTML;
     }
 
-//Get Name
+/**
+ * Get the employee first and last name from the user_meta table
+ * Concatinate them to a single string.
+ * 
+ * @return string name.
+ */
+
     function getEmployeeName($employeeId)
     {
 
@@ -183,7 +207,12 @@ HTML;
         return $combined_name;
     }
 
-//Get Descriptions
+/**
+ * Get the description from the user_meta table
+ * 
+ * @return string description.
+ */
+
     function getEmployeeDescription($employeeId)
     {
 
@@ -194,7 +223,13 @@ HTML;
         return $description;
     }
 
-//Get Avatars
+/**
+ * Get the avatar id from the user_meta table.
+ * and then get an attachment URL using the id.
+ * 
+ * @return string avatar URL.
+ */
+
     function getEmployeeAvatar($employeeId)
     {
 
@@ -207,7 +242,12 @@ HTML;
         return $avatar_url;
     }
 
-//Get Position at Company
+/**
+ * Get the position from the user_meta table
+ * 
+ * @return string position.
+ */
+
     function getEmployeePosition($employeeId)
     {
 
@@ -217,7 +257,12 @@ HTML;
         return  $position;
     }
 
-//Get Social Network Links
+/**
+ * Get the social links from the user_meta table
+ * 
+ * @return array social links.
+ */
+
     function getEmployeeSocialLinks($employeeId)
     {
 
