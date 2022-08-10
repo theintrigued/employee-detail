@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/employee-detail",
+  "version": "0.1.0",
+  "title": "Employee Detail",
+  "category": "common",
+  "icon": "smiley",
+  "description": "A WordPress Block Pugin to get employee data from the database!",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "employee-detail",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "employeeId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "avatarURL": {
+      "type": "string"
+    },
+    "socialLinks": {
+      "type": "array"
+    },
+    "employeePreview": {
+      "type": "string"
+    }
+  }
+}

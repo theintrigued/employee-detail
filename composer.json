@@ -1,0 +1,24 @@
+{
+    "name": "aliw/employee-detail-plugin",
+    "description": "This plugin retrieves user/employee data from the database and makes it available as a 'Gutenberg Block' in WordPress. The user can be selected from a drop-down list showing the image, name & position of the user in the company. Upon clicking on the element, an overlay appears showing more information about the user, such as a description and a few social links. (Note that the plugin uses custom-generated data from the database and not default WordPress user-values as the data taken such as an image are specific to the user, which is more than what WordPress usually stores as use-data.)",
+    "type": "wordpress-block-plugin",
+    "license": "As a owner of this project, I allow anyone to use this plugin given I am the one who gave it to them.",
+    "autoload": {
+        "psr-4": {
+            "Aliw\\EmployeeDetailPlugin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ali W."
+        }
+    ],
+    "require-dev": {
+        "inpsyde/php-coding-standards": "^1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
