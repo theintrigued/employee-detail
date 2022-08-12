@@ -32,7 +32,7 @@ All you need to do to get the plugin working is extract the file in your plugins
   And
 * Place `custom_script.js`, `employeeRegistrationBackend.php`, `employeeRegistrationFrontEnd.php`  in the root directory too.
 
- at the beginning of the functions.php file of your theme, after moving these files in the root directory of your site (inside htdocs or public_html). And un-comment the `employeeRegistrationFrontEnd.php` file to start the custom registration. These files are located in the `/misc` folder
+ at the beginning of the `functions.php` file of your theme, after moving these files in the root directory of your site (inside htdocs or public_html). And un-comment the `employeeRegistrationFrontEnd.php` file to start the custom registration. These files are located in the `/misc` folder
 
 
 
